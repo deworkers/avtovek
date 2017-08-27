@@ -256,6 +256,7 @@ body {
 
 .calc {
     background: #f2f8fc;
+    padding: 50px 0;
 }
 
 .calc-inn {
@@ -269,6 +270,7 @@ body {
     vertical-align: top;
     width: 555px;
     padding-right: 40px;
+    border-right: 1px solid #d8e1e8;
 }
 
 .calc-programs {
@@ -278,7 +280,7 @@ body {
 .calc-field-title {
     font-size: 16px;
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .calc-program {
@@ -335,18 +337,19 @@ body {
 
 .price-slider {
     width: 440px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 #custom-handle {
-    width: 75px;
+    width: 85px;
     height: 30px;
     border: 3px solid #5ea7de;
     border-radius: 5px;
     text-align: center;
-    margin-left: -35px;
+    margin-left: -40px;
     background: #f2f8fc;
     z-index: 10;
+    cursor: pointer;
 }
 
 .price-slider__line {
@@ -389,19 +392,30 @@ body {
 }
 
 .calc-fields {
-    
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
 }
 
 .calc-field {
-    
+
+    span {
+        font-size: 14px;
+        margin-left: 10px;
+    }
 }
 
 .calc-start {
-    
+        border: 1px solid #bdc5cc;
+        outline: none;
+        height: 35px;
+        padding: 0 5px;
+        font-size: 14px;
+        width: 120px;    
 }
 
 .calc-field__time {
-    
+    display: inline-block;
 }
 
 .calc-field__percent {
@@ -413,22 +427,66 @@ body {
 }
 
 .calc-discount {
-    
+    font-size: 24px;
+    font-weight: 300;
+
+    span {
+        color: @color_red;
+        font-weight: 700;
+    }
 }
 
 .calc-pay {
-    
+    font-size: 24px;
+    font-weight: 300;
+
+    span {
+        color: @color_red;
+        font-weight: 700;
+    }
 }
 
 .calc-right {
     display: inline-block;
     vertical-align: top;
     width: 360px;
+    padding-left: 40px;
 
 }
 
 .calc-line {
-    
+    margin-bottom: 20px; 
+    width: 280px;
+    input {
+        border: 1px solid #bdc5cc;
+        height: 35px;
+        background: #fff;
+        border-radius: 3px;
+        width: 100%;
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    span {
+        font-size: 11px;
+        color: #737373;
+        line-height: 14px;
+        display: block;
+        margin-top: 5px;
+    }
+
+    button {
+        border: none;
+        outline: none;
+        border-radius: 3px;
+        background: @color_blue;
+        color: #fff;
+        font-size: 14px;
+        height: 45px;
+        width: 100%;
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
 }
 
 
@@ -438,27 +496,69 @@ body {
 
 
 .avto {
-    
+    padding: 60px 0;
 }
 
 .avto-slider {
-    
+    overflow: hidden;
 }
 
 .avto-slide {
-    
+    text-align: center; 
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    table {
+        width: 100%;
+        margin-bottom: 20px;
+        td {
+            font-size: 14px;
+            font-weight: 300;
+            padding: 8px 5px;
+            text-align: left;
+            width: 50%;
+
+            span {
+                font-weight: 700;
+            }
+            &:nth-child(1) {
+                text-align: right;
+            }
+
+            &:nth-child(2) {
+
+            }
+        }
+    }
 }
 
 .avto-slide__title {
-    
+    font-size: 18px;
+    display: inline-block;
+    border-bottom: 1px solid @color_blue;
+    text-decoration: none;
+    margin-bottom: 20px;
 }
 
 .avto-slide__buy {
-    
+    display: inline-block;
+    text-decoration: none;
+    padding: 15px 40px;
+    color: #fff;
+    background: @color_blue;
+    border-radius: 3px;
+    font-size: 14px;
+    margin-bottom: 20px;
 }
 
 .avto-bottom {
-    
+    color: #a7a7a7;
+    font-size: 11px;
+    text-align: center;
+    max-width: 920px;
+    margin: 0 auto;
 }
 
 
@@ -470,19 +570,49 @@ body {
 
 
 .faq {
-    
+    background: #f2f8fc;
+    padding: 60px 0;
 }
 
 .faq-inn {
-    
+    max-width: 920px;
+    margin: 0 auto;
+
+    ol {
+        counter-reset: myCounter;
+        padding-left: 60px;
+    }
 }
 
 .faq-one {
-    
+    list-style: none;
+    position: relative;
+    margin-bottom: 40px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &:before {
+        position: absolute;
+        counter-increment: myCounter;
+        content:counter(myCounter);
+        left: -60px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 1px solid @color_red;
+        color: @color_red;
+        font-size: 19px;
+        font-weight: 300;
+        text-align: center;line-height: 30px;
+    }
 }
 
 .faq-q {
-    
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 20px;
 }
 
 .faq-a {
@@ -498,21 +628,82 @@ body {
 
 
 .form {
-    
+    padding: 50px 0;
+}
+
+.bottom-form {
+    max-width: 660px;
+    margin: 0 auto;
 }
 
 .form-left {
-    
+    display: inline-block;
+    vertical-align: top;
+    width: 280px;
+    margin-right: 25px;
 }
 
 .form-line {
-    
+    margin-bottom: 20px;
+    input {
+        border: 1px solid #bdc5cc;
+        outline: none;
+        height: 35px;
+        background: #fff;
+        border-radius: 3px;
+        width: 100%;
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    textarea {
+        width: 100%;
+        border: 1px solid #bdc5cc;
+        outline: none;
+        background: #fff;
+        border-radius: 3px;
+        font-size: 14px;
+        padding: 10px;
+        height: 145px;
+        font-family: @font;
+    }
 }
 
 .form-right {
-    
+    display: inline-block;
+    vertical-align: top;
+    width: 335px;
 }
 
 .form-bottom {
-    
+    word-spacing: -0.35em;
+    span {
+        display: inline-block;
+        vertical-align: middle;
+        width: 470px;
+        color: #a7a7a7;
+        font-size: 11px;
+        text-align: right;
+        margin-right: 15px;
+        margin-bottom: 15px;
+    }
+
+    button {
+        display: inline-block;
+        vertical-align: middle;
+        border: none;
+        outline: 0;
+        border-radius: 3px;
+        background: #0065b1;
+        color: #fff;
+        font-size: 14px;
+        height: 45px;
+        width: 160px;
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+}
+
+#map {
+    height: 350px;
 }
