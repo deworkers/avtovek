@@ -2,7 +2,7 @@
     <div class="calc">
         <div class="calc-inn">
             <h2>Расчитайте стоимость кредита по госпрограмме</h2>
-            <form action="" name="calc">
+            <form action="" id="calc">
                 <div class="calc-left">
                     <div class="calc-programs">
                         <div class="calc-field-title">Госпрограмма:</div>
@@ -30,7 +30,7 @@
                     <div class="calc-fields">
                         <div class="calc-field">
                             <div class="calc-field-title">Первоначальный взнос:</div>
-                            <input class="calc-start" type="text" value="250000"><span>руб.</span>
+                            <input class="calc-start" type="text" pattern="^[ 0-9]+$" value="25000"><span>руб.</span>
                         </div>
                         <div class="calc-field">
                             <div class="calc-field-title">Срок кредита:</div>

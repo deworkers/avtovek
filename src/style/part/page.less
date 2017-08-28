@@ -16,6 +16,7 @@ body {
 	max-width: 1340px;
 	margin: 0 auto;
     padding: 0 30px;
+    overflow: hidden;
 }
 
 
@@ -296,6 +297,7 @@ body {
         padding-left: 30px;
         display: inline-block;
         margin-right: 20px;
+        cursor: pointer;
         &:before {
             content: "";
             display: block;
@@ -497,6 +499,30 @@ body {
 
 .avto {
     padding: 60px 0;
+
+    .swiper-next {
+        .sprite(@slider-arrow);
+        transform: scale(0.5);
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        z-index: 10;
+        cursor: pointer;
+    }
+
+    .swiper-prev {
+        .sprite(@slider-arrow);
+        transform: scale(0.5) rotate(180deg);
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        z-index: 10;
+        cursor: pointer;
+    }
+
+    .swiper-button-disabled {
+        opacity: 0;
+    }
 }
 
 .avto-slider {
@@ -672,7 +698,7 @@ body {
 .form-right {
     display: inline-block;
     vertical-align: top;
-    width: 335px;
+    width: 345px;
 }
 
 .form-bottom {
@@ -680,7 +706,7 @@ body {
     span {
         display: inline-block;
         vertical-align: middle;
-        width: 470px;
+        width: 480px;
         color: #a7a7a7;
         font-size: 11px;
         text-align: right;
@@ -706,4 +732,40 @@ body {
 
 #map {
     height: 350px;
+}
+
+.map-contact {
+    z-index: 10;
+    background: #fff;
+    padding: 30px 20px;
+    width: 250px;
+    position: absolute;
+    top: 80px;
+    p {
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+}
+
+.map-inn {
+    width: 760px;
+    margin: 0 auto;
+}
+
+.modal-title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.modal__close {
+    position: absolute;
+    z-index: 10;
+    .sprite(@close);
+    transform: scale(0.5);
+    top: -40px;
+    right: -30px;
+    cursor: pointer;
 }

@@ -45,20 +45,36 @@ $(document).ready(function() {
         var x = ui.value;
         var y = $('.calc-start').val();
         $('.calc-pay span').text(replacer2(parseInt(calc(x,y))));
-        
-        console.log(parseInt(calc(x,y)));
       }
     });
 
-    start.on('change', function() {
+    start.on('keypress', function(event) { //проверка ввода
+      var chr = event.originalEvent.key;
+      var regexp = /[0-9]{1}/g;
+
+
+      if ( !regexp.test(chr) ) {
+        return false;
+      } 
+
+    });
+
+    start.on('keyup', function() { //
       var x = price.val();
       var y = $(this).val();
-      console.log(x, y);
+      if ( y > 90000 ) {
+        $(this).val(90000);
+        y = 90000;
+      }
+
       $('.calc-pay span').text(replacer2(parseInt(calc(x,y))));
+
     });
 
     var mySwiper = new Swiper('.avto-slider', {
-          slidesPerView: 3
+          slidesPerView: 3,
+          nextButton: '.swiper-next',
+          prevButton: '.swiper-prev',
     }); 
 
 });

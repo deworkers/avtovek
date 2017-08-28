@@ -1,7 +1,7 @@
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script><script type="text/javascript">
 	ymaps.ready(function () {
 	    var myMap = new ymaps.Map('map', {
-	            center: [56.83171856787374,60.6625664999999],
+	            center: [56.794679541710245,60.56870403439331],
 	            zoom: 16,
 	            controls: []
 	        }, {
@@ -9,15 +9,28 @@
 	     
 
 	        myPlacemark = new ymaps.Placemark([
-	            56.83171856787374,60.6625664999999
-	        ], {
+	        	56.794679541710245,60.56870403439331
+	        	], {
 	            iconCaption: 'г. Екатеринбург, ул. Решетникова 22'
 	        }, {
-	            preset: 'islands#blueCircleDotIconWithCaption',
-	            iconCaptionMaxWidth: '240'
+		        iconLayout: 'default#image',
+	            iconImageHref: 'img/map.png',
+	            iconImageSize: [40, 54],
+	            iconImageOffset: [-20, -54]
 	        });
 
 	    myMap.geoObjects.add(myPlacemark);
 	}); 
 </script>
-<div id="map"></div>
+<div id="map">
+	<div class="map-inn">
+		<div class="map-contact">
+			<h5>Адрес</h5>
+			<p>г. Екатеринбург<br>
+			ул. Решетникова 22</p>
+
+			<h5>Телефон</h5>
+			<p>+7 (343) 253-00-53</p>
+		</div>
+	</div>
+</div>

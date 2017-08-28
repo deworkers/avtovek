@@ -97,7 +97,7 @@ h4 {
 }
 
 h5 {
-    .head(13px, 15px, normal, @color_text);
+    .head(13px, 10px, normal, @color_text);
     font-weight: 700;
 }
 
@@ -145,13 +145,13 @@ ul li, ol li{
 }
 
 .modal {
-    width: 560px;
+    width: 360px;
     position: absolute;
     left: 50%;
     top: 150px;
-    margin-left: -280px;
+    margin-left: -180px;
     background: #fff;
-    padding: 40px 40px;
+    padding: 50px 40px 20px;
     display: none;
 }
 
@@ -169,4 +169,20 @@ ul li, ol li{
 
 .j-noScroll {
     overflow: hidden;
+}
+
+
+input.error {
+    border: 1px solid @color_red !important;
+    outline: none;
+}
+
+label.error {
+    position: absolute;
+    left: 10000px;
+}
+
+textarea.error {
+    border: 1px solid @color_red !important;
+    outline: none;
 }

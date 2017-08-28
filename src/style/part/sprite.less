@@ -11,6 +11,17 @@ The large array-like variables contain all information about a single icon
 At the bottom of this section, we provide information about the spritesheet itself
 @spritesheet: width height image @spritesheet-sprites;
 */
+@close-name: 'close';
+@close-x: 60px;
+@close-y: 0px;
+@close-offset-x: -60px;
+@close-offset-y: 0px;
+@close-width: 42px;
+@close-height: 42px;
+@close-total-width: 102px;
+@close-total-height: 60px;
+@close-image: '../img/sprite.png';
+@close: 60px 0px -60px 0px 42px 42px 102px 60px '../img/sprite.png' 'close';
 @slider-arrow-name: 'slider-arrow';
 @slider-arrow-x: 0px;
 @slider-arrow-y: 0px;
@@ -18,26 +29,26 @@ At the bottom of this section, we provide information about the spritesheet itse
 @slider-arrow-offset-y: 0px;
 @slider-arrow-width: 60px;
 @slider-arrow-height: 60px;
-@slider-arrow-total-width: 76px;
+@slider-arrow-total-width: 102px;
 @slider-arrow-total-height: 60px;
 @slider-arrow-image: '../img/sprite.png';
-@slider-arrow: 0px 0px 0px 0px 60px 60px 76px 60px '../img/sprite.png' 'slider-arrow';
+@slider-arrow: 0px 0px 0px 0px 60px 60px 102px 60px '../img/sprite.png' 'slider-arrow';
 @sm-name: 'sm';
 @sm-x: 60px;
-@sm-y: 0px;
+@sm-y: 42px;
 @sm-offset-x: -60px;
-@sm-offset-y: 0px;
+@sm-offset-y: -42px;
 @sm-width: 16px;
 @sm-height: 16px;
-@sm-total-width: 76px;
+@sm-total-width: 102px;
 @sm-total-height: 60px;
 @sm-image: '../img/sprite.png';
-@sm: 60px 0px -60px 0px 16px 16px 76px 60px '../img/sprite.png' 'sm';
-@spritesheet-width: 76px;
+@sm: 60px 42px -60px -42px 16px 16px 102px 60px '../img/sprite.png' 'sm';
+@spritesheet-width: 102px;
 @spritesheet-height: 60px;
 @spritesheet-image: '../img/sprite.png';
-@spritesheet-sprites: @slider-arrow @sm;
-@spritesheet: 76px 60px '../img/sprite.png' @spritesheet-sprites;
+@spritesheet-sprites: @close @slider-arrow @sm;
+@spritesheet: 102px 60px '../img/sprite.png' @spritesheet-sprites;
 
 /*
 The provided classes are intended to be used with the array-like variables
