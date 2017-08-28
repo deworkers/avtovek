@@ -75,6 +75,13 @@ $(document).ready(function() {
           slidesPerView: 3,
           nextButton: '.swiper-next',
           prevButton: '.swiper-prev',
+          breakpoints: {
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 10,
+              centeredSlides: true
+            }
+          }
     }); 
 
 });
