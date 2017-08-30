@@ -20,10 +20,11 @@
     .head-phone {
         width: auto;
         float: right;
-        top: -10px;
+        top: 0px;
         a {
             font-size: 15px;
             text-align: center;
+            line-height: 15px;
             letter-spacing: 1px;
         }
 
@@ -150,6 +151,10 @@
 
         p {
             font-size: 12px;
+        }
+
+        ul {
+            min-height: 0;
         }
     }
 
@@ -291,9 +296,11 @@
     }
 
     .form-bottom {
+        display: flex;
+        flex-direction: column-reverse;
         span {
             width: 100%;
-            text-align: left;
+            text-align: center;
         }
 
         button {
@@ -339,6 +346,16 @@
 
     .form-send {
         margin-bottom: 0 !important;
+    }
+
+    .mobile-hidden {
+        display: block;
+    }
+
+    .mobile-hidden {
+        font-size: 12px;
+        text-align: center;
+        margin: 20px 0 0;
     }
 }
 
